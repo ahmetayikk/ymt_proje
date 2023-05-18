@@ -1,29 +1,27 @@
-# Kullanıcıdan iki sayı alınır
+# Kullanıcıdan iki sayı alınması
 sayi1 = float(input("Birinci sayıyı girin: "))
 sayi2 = float(input("İkinci sayıyı girin: "))
 
-# İşlem seçimi için kullanıcıya mesaj gösterilir
-print("İşlem seçin:")
+# İşlem seçimi
+print("Yapmak istediğiniz işlemi seçin:")
 print("1 - Toplama")
 print("2 - Çıkarma")
 print("3 - Çarpma")
-tercih = input("Tercihinizi yapın (1, 2 veya 3): ")
+print("4 - Bölme")
+secim = int(input("Seçiminizi yapın (1-4): "))
 
-# İşlem tercihine göre hesaplama yapılır
-if tercih == "1":
+# İşlemi gerçekleştirme ve sonucu gösterme
+if secim == 1:
     sonuc = sayi1 + sayi2
-    islem = "toplama"
-elif tercih == "2":
+    print("Toplama sonucu:", sonuc)
+elif secim == 2:
     sonuc = sayi1 - sayi2
-    islem = "çıkarma"
-elif tercih == "3":
+    print("Çıkarma sonucu:", sonuc)
+elif secim == 3:
     sonuc = sayi1 * sayi2
-    islem = "çarpma"
+    print("Çarpma sonucu:", sonuc)
+elif secim == 4:
+    sonuc = sayi1 / sayi2
+    print("Bölme sonucu:", sonuc)
 else:
-    print("Geçersiz tercih!")
-    exit()
-
-# Sonucu ekrana yazdırma
-print(f"Sonuç: {sonuc} ({sayi1} ile {sayi2} {islem} sonucu)")
-
-
+    print("Geçersiz bir seçim yaptınız.")
