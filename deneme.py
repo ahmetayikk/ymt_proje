@@ -9,7 +9,8 @@ print("2 - Çıkarma")
 print("3 - Çarpma")
 print("4 - Bölme")
 print("5 - Hangisi büyük?")
-secim = int(input("Seçiminizi yapın (1-5): "))
+print("6 - Hangisi küçük?")
+secim = int(input("Seçiminizi yapın (1-6): "))
 
 # İşlemi gerçekleştirme ve sonucu gösterme
 if secim == 1:
@@ -29,6 +30,13 @@ elif secim == 5:
         print("Birinci sayı büyük.")
     elif sayi2 > sayi1:
         print("İkinci sayı büyük.")
+    else:
+        print("Girilen sayılar birbirine eşit.")
+elif secim == 6:
+    if sayi1 < sayi2:
+        print("Birinci sayı küçük.")
+    elif sayi2 < sayi1:
+        print("İkinci sayı küçük.")
     else:
         print("Girilen sayılar birbirine eşit.")
 else:
